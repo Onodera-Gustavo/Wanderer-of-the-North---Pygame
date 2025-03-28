@@ -1,3 +1,5 @@
+import pygame as pg
+
 
 WIDTH, HEIGHT = 800, 600
 
@@ -15,48 +17,8 @@ cores = {
     "cinza_claro": (192, 192, 192),
 }
 
-# inimigos : vida, defesa, ataque, velocidade 
-inimigos = {
-    'Esqueleto Soldado': {
-        'ataques': 10,
-        'velocidade': 0.6,
-        'vida': 120,
-        'defesa': 3,
-    },
-    'Esqueleto Arqueiro': {
-        'ataques': 7,
-        'velocidade': 0.7,
-        'vida': 80,
-        'defesa': 1,
-    },
-    'Cultista Iniciado': {
-        'ataques': 15,
-        'velocidade': 0.7,
-        'vida': 120,
-        'defesa': 2,
-    },
-    'Cultista Sacerdote': {
-        'ataques': 20,
-        'velocidade': 0.5,
-        'vida': 80,
-        'defesa': 4,
-    },
-    'Cultista Diácono': {
-        'ataques': 40,
-        'velocidade': 0.3,
-        'vida': 30,
-        'defesa': 5,
-    },
-    'Demônio': {
-        'ataques': 15,
-        'velocidade': 0.5,
-        'vida': 100,
-        'defesa': 5,
-    },
-    'Aberração': {
-        'ataques': 50,
-        'velocidade': 0.2,
-        'vida': 170,
-        'defesa': 8,
-    },
-}
+
+def time_passed(time, amount):
+    if pg.time.get_ticks() - time > amount:
+        time = pg.time.get_ticks()
+        return True
