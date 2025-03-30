@@ -11,7 +11,7 @@ class Game:
         pygame.display.set_caption('Jogo')
 
         # Carrega o mapa
-        self.mapa = Map(r'C:\Users\DEV-T-2025\Exercicios Python\Teste_Pygame\Wanderer-of-the-North---Pygame\Documentação\Documentação\Mapa_TMX_rodando\mapa.tmx') #Mude o caminho caso esteja na sua maquina
+        self.mapa = Map(r'mapa.tmx') #Mude o caminho caso esteja na sua maquina
 
         # Grupo de sprites
         self.sprites = pygame.sprite.Group()
